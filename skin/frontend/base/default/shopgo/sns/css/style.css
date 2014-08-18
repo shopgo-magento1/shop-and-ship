@@ -9,7 +9,7 @@
 #sns-addresses-list {
     height: 400px;
     overflow-y: auto;
-    padding: 0 30px;
+    padding: 0 7%;
 }
 
 .sns-address {
@@ -18,4 +18,12 @@
 
 .sns-address.right {
     text-align: right;
+}
+
+@media screen
+and (max-width: 700px) {
+    .sns-address.right {
+        float: left !important;
+        text-align: left !important;
+    }
 }
