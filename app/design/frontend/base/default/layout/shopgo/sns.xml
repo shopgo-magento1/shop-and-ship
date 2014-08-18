@@ -12,7 +12,7 @@
             <action method="setTemplate" ifconfig="shopgo_sns/general/enabled">
                 <template>shopgo/sns/customer/address/edit.phtml</template>
             </action>
-            <block type="sns/customer_address" name="customer_sns_address" template="shopgo/sns/customer/address/edit/address.phtml" />
+            <block type="sns/customer_address" name="customer_sns_address" template="shopgo/sns/customer/address/edit/addresses.phtml" />
         </reference>
     </customer_address_form>
 </layout>

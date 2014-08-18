@@ -9,10 +9,13 @@
 #sns-addresses-list {
     height: 400px;
     overflow-y: auto;
+    padding: 0 30px;
 }
 
 .sns-address {
-    float: left;
     height: 200px;
-    width: 300px;
+}
+
+.sns-address.right {
+    text-align: right;
 }

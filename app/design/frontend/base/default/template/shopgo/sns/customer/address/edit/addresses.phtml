@@ -1,0 +1,81 @@
+<?php if ($this->isEnabled()): ?>
+<div class="fieldset">
+    <h2 class="legend"><?php echo $this->__('Shop and Ship') ?></h2>
+    <form action="<?php echo $this->getAddressUrl() ?>" method="post" id="sns-auth-form-validate">
+    <?php echo $this->getBlockHtml('formkey')?>
+        <ul class="form-list">
+            <li class="fields">
+                <div class="field">
+                    <label for="sns-email" class="required"><em>*</em><?php echo $this->__('Email') ?></label>
+                    <div class="input-box">
+                        <input type="text" name="sns-email" value="" title="<?php echo $this->__('Telephone') ?>" class="input-text  required" id="sns-email" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label for="sns-password" class="required"><em>*</em><?php echo $this->__('Password') ?></label>
+                    <div class="input-box">
+                        <input type="password" name="sns-password" id="sns-password" title="<?php echo $this->__('Password') ?>" value="" class="input-text required" />
+                    </div>
+                </div>
+            </li>
+            <li class="wide">
+                <button type="submit" title="<?php echo $this->__('Get Addresses list') ?>" class="button"><span><span><?php echo $this->__('Get Addresses list') ?></span></span></button>
+                <span id="sns-get-addresses-loader">&nbsp;<img src="<?php echo $this->getSkinUrl('shopgo/sns/image/ajax-loader.gif') ?>" alt="Loading..." /></span>
+            </li>
+            <li id="sns-addresses-container" class="wide">
+                <br />
+                <label for="sns-addresses"><?php echo $this->__('Shop and Ship Addresses') . ' (' . $this->__('Select address flag to apply') . ')' ?></label>
+                <div class="clearer"></div>
+                <br />
+                <div id="sns-addresses-list">
+                    <div class="list-row clearer">
+                        <div id="sns-us-address" class="sns-address left">
+                            <a href="#" class="sns-address-flag" rel="US" title="<?php echo $this->__('USA') ?>"><img src="<?php echo $this->getSkinUrl('shopgo/sns/image/flags/us.png') ?>" alt="<?php echo $this->__('USA') ?>" /></a>
+                        </div>
+                        <div id="sns-uk-address" class="sns-address right">
+                            <a href="#" class="sns-address-flag" rel="UK" title="<?php echo $this->__('UK') ?>"><img src="<?php echo $this->getSkinUrl('shopgo/sns/image/flags/uk.png') ?>" alt="<?php echo $this->__('UK') ?>" /></a>
+                        </div>
+                    </div>
+                    <div class="list-row clearer">
+                        <div id="sns-ae-address" class="sns-address left">
+                            <a href="#" class="sns-address-flag" rel="AE" title="<?php echo $this->__('UAE') ?>"><img src="<?php echo $this->getSkinUrl('shopgo/sns/image/flags/ae.png') ?>" alt="<?php echo $this->__('UAE') ?>" /></a>
+                        </div>
+                        <div id="sns-hk-address" class="sns-address right">
+                            <a href="#" class="sns-address-flag" rel="HK" title="<?php echo $this->__('Hong Kong') ?>"><img src="<?php echo $this->getSkinUrl('shopgo/sns/image/flags/hk.png') ?>" alt="<?php echo $this->__('Hong Kong') ?>" /></a>
+                        </div>
+                    </div>
+                    <div class="list-row clearer">
+                        <div id="sns-cn-address" class="sns-address left">
+                            <a href="#" class="sns-address-flag" rel="CN" title="<?php echo $this->__('China') ?>"><img src="<?php echo $this->getSkinUrl('shopgo/sns/image/flags/cn.png') ?>" alt="<?php echo $this->__('China') ?>" /></a>
+                        </div>
+                        <div id="sns-de-address" class="sns-address right">
+                            <a href="#" class="sns-address-flag" rel="DE" title="<?php echo $this->__('Germany') ?>"><img src="<?php echo $this->getSkinUrl('shopgo/sns/image/flags/de.png') ?>" alt="<?php echo $this->__('Germany') ?>" /></a>
+                        </div>
+                    </div>
+                    <div class="list-row clearer">
+                    <div id="sns-it-address" class="sns-address left">
+                            <a href="#" class="sns-address-flag" rel="IT" title="<?php echo $this->__('Italy') ?>"><img src="<?php echo $this->getSkinUrl('shopgo/sns/image/flags/it.png') ?>" alt="<?php echo $this->__('Italy') ?>" /></a>
+                        </div>
+                        <div id="sns-in-address" class="sns-address right">
+                            <a href="#" class="sns-address-flag" rel="IN" title="<?php echo $this->__('India') ?>"><img src="<?php echo $this->getSkinUrl('shopgo/sns/image/flags/in.png') ?>" alt="<?php echo $this->__('India') ?>" /></a>
+                        </div>
+                    </div>
+                    <div class="list-row clearer">
+                        <div id="sns-tr-address" class="sns-address left">
+                            <a href="#" class="sns-address-flag" rel="TR" title="<?php echo $this->__('Turkey') ?>"><img src="<?php echo $this->getSkinUrl('shopgo/sns/image/flags/tr.png') ?>" alt="<?php echo $this->__('Turkey') ?>" /></a>
+                        </div>
+                        <div id="sns-za-address" class="sns-address right">
+                            <a href="#" class="sns-address-flag" rel="ZA" title="<?php echo $this->__('South Africa') ?>"><img src="<?php echo $this->getSkinUrl('shopgo/sns/image/flags/za.png') ?>" alt="<?php echo $this->__('South Africa') ?>" /></a>
+                        </div>
+                    </div>
+                    <div class="clearer"></div>
+                </div>
+            </li>
+        </ul>
+    </form>
+</div>
+<script type="text/javascript">//<![CDATA[
+    shopgoSns.addressesRegions = eval("(" + '<?php echo $this->getAddressesRegions() ?>' + ")");
+    shopgoSns.deAddressRegion  = eval("(" + '<?php echo $this->getDeAddressRegion() ?>' + ")");
+//]]></script>
+<?php endif ?>
