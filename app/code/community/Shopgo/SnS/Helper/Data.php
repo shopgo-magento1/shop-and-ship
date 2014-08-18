@@ -4,22 +4,17 @@ class Shopgo_SnS_Helper_Data extends Mage_Core_Helper_Abstract
 {
     public function restRequest($method, $params)
     {
-        $result = null;
-        $url = $this->_getRestUrl($method);
+        $result     = null;
+        $url        = $this->_getRestUrl($method);
+        $data       = $this->_restDataFormat($method, $params);
+        $httpClient = new Varien_Http_Client();
 
-        $ch = curl_init();
-
-        $data = $this->_restDataFormat($method, $params);
-
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: text/xml; charset=UTF-8'));
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-        $result = curl_exec($ch);
-
-        curl_close($ch);
+        $result = $httpClient
+            ->setUri($url)
+            ->setHeaders('Content-Type: text/xml; charset=UTF-8')
+            ->setRawData($data)
+            ->request(Varien_Http_Client::POST)
+            ->getBody();
 
         return $result;
     }
@@ -49,18 +44,19 @@ class Shopgo_SnS_Helper_Data extends Mage_Core_Helper_Abstract
 
     private function _getRestUrl($method)
     {
-        $url = '';
+        $url   = 'https://ws.aramex.net/ClientApps/ShopandShip/Service_1_0.svc/';
+        $param = '';
 
         switch ($method) {
             case 'authenticate_user':
-                $url = 'https://ws.aramex.net/ClientApps/ShopandShip/Service_1_0.svc/authenticateuser';
+                $param = 'authenticateuser';
                 break;
             case 'get_address_list':
-                $url = 'https://ws.aramex.net/ClientApps/ShopandShip/Service_1_0.svc/getusermailboxes';
+                $param = 'getusermailboxes';
                 break;
         }
 
-        return $url;
+        return $url . $param;
     }
 
     public function getAddressesRegions($json = false)
