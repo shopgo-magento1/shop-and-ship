@@ -21,7 +21,7 @@
 }
 
 @media screen
-and (max-width: 700px) {
+and (max-width: 610px) {
     .sns-address.right {
         float: left !important;
         text-align: left !important;
