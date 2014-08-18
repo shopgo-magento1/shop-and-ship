@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Shopgo_SnS>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Shopgo_SnS>
+    </modules>
+</config>

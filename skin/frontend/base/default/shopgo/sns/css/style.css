@@ -1,0 +1,18 @@
+#sns-get-addresses-loader {
+    display: none;
+}
+
+#sns-addresses-container {
+    display: none;
+}
+
+#sns-addresses-list {
+    height: 400px;
+    overflow-y: auto;
+}
+
+.sns-address {
+    float: left;
+    height: 200px;
+    width: 300px;
+}

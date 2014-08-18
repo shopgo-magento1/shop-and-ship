@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <customer_address_form>
+        <reference name="head">
+            <action method="addCss" ifconfig="shopgo_sns/general/enabled"><stylesheet>shopgo/sns/css/style.css</stylesheet></action>
+            <action method="addItem" ifconfig="shopgo_sns/general/jquery"><type>skin_js</type><file>shopgo/sns/js/jquery/jquery.js</file></action>
+            <action method="addItem" ifconfig="shopgo_sns/general/jquery"><type>skin_js</type><file>shopgo/sns/js/jquery/jquery.noconflict.js</file></action>
+            <action method="addItem" ifconfig="shopgo_sns/general/jquery_form"><type>skin_js</type><file>shopgo/sns/js/jquery/jquery.form.js</file></action>
+            <action method="addItem" ifconfig="shopgo_sns/general/enabled"><type>skin_js</type><file>shopgo/sns/js/script.js</file></action>
+        </reference>
+        <reference name="customer_address_edit">
+            <action method="setTemplate" ifconfig="shopgo_sns/general/enabled">
+                <template>shopgo/sns/customer/address/edit.phtml</template>
+            </action>
+            <block type="sns/customer_address" name="customer_sns_address" template="shopgo/sns/customer/address/edit/address.phtml" />
+        </reference>
+    </customer_address_form>
+</layout>
