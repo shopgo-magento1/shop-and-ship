@@ -6,6 +6,10 @@
     text-align: left;
 }
 
+#sns-form .form-list label {
+    font-size: inherit;
+}
+
 #sns-get-addresses-loader {
     display: none;
 }
