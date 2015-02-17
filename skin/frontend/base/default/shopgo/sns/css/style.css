@@ -57,6 +57,7 @@ and (max-width: 610px) {
 }
 
 #sns-addresses-list ul li a.sns-address-use {
+    color: #1e7ec8;
     display: block;
     position: absolute;
     right: 10px;
