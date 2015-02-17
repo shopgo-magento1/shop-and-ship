@@ -1,0 +1,5 @@
+app/code/community/Shopgo/SnS/                          app/code/community/Shopgo/SnS/
+app/design/frontend/base/default/layout/shopgo/         app/design/frontend/base/default/layout/shopgo/
+app/design/frontend/base/default/template/shopgo/       app/design/frontend/base/default/template/shopgo/
+app/etc/modules/Shopgo_SnS.xml                          app/etc/modules/Shopgo_SnS.xml
+skin/frontend/base/default/shopgo/sns/                  skin/frontend/base/default/shopgo/sns/
