@@ -1,0 +1,16 @@
+{
+    "name": "shopgo/Shopgo_SnS",
+    "type": "magento-module",
+    "license": "GPLv2",
+    "description": "Shop and Ship Magento extension",
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*",
+        "shopgo/shopgo_core": "dev-master"
+    },
+    "authors":[
+        {
+            "name": "Ammar",
+            "email": "ammar@shopgo.me"
+        }
+    ]
+}
