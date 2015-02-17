@@ -12,6 +12,10 @@
     padding-top: 10px;
 }
 
+#sns-addresses-container .showhide a {
+    color: #1e7ec8;
+}
+
 .sns-address {
     height: 200px;
 }
