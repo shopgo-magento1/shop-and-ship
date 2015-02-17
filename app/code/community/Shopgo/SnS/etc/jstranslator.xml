@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<jstranslator>
+    <bad-auth translate="message" module="sns">
+        <message>Could not authenticate user</message>
+    </bad-auth>
+    <bad-response translate="message" module="sns">
+        <message>Could not retrieve Shop and Ship addresses list</message>
+    </bad-response>
+    <address-import translate="message" module="sns">
+        <message>The selected address has been set</message>
+    </address-import>
+    <contact-admin translate="message" module="sns">
+        <message>If the issue persists, please contact the website administrator</message>
+    </contact-admin>
+    <check-account translate="message" module="sns">
+        <message>Check your account details then save</message>
+    </check-account>
+    <show translate="message" module="sns">
+        <message>show</message>
+    </show>
+    <hide translate="message" module="sns">
+        <message>hide</message>
+    </hide>
+</jstranslator>

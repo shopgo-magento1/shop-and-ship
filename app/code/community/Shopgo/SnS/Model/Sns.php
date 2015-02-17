@@ -2,9 +2,6 @@
 
 class Shopgo_SnS_Model_Sns extends Mage_Core_Model_Abstract
 {
-    const DE_ADDRESS_REGION_CODE = 'HES';
-    const DE_ADDRESS_REGION_NAME = 'Hessen';
-
     public function isEnabled()
     {
         return Mage::getStoreConfig('shopgo_sns/general/enabled');

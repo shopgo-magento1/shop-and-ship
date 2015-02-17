@@ -4,6 +4,9 @@
         <Shopgo_SnS>
             <active>true</active>
             <codePool>community</codePool>
+            <depends>
+                <Shopgo_Core/>
+            </depends>
         </Shopgo_SnS>
     </modules>
 </config>

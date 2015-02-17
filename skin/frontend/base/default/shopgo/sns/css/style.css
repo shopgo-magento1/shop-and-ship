@@ -4,12 +4,7 @@
 
 #sns-addresses-container {
     display: none;
-}
-
-#sns-addresses-list {
-    height: 400px;
-    overflow-y: auto;
-    padding: 0 7%;
+    padding-top: 10px;
 }
 
 .sns-address {
@@ -23,7 +18,87 @@
 @media screen
 and (max-width: 610px) {
     .sns-address.right {
-        float: left !important;
-        text-align: left !important;
+        float: left;
+        text-align: left;
     }
+}
+
+#sns-addresses-list {
+    padding: 20px 0 10px;
+}
+
+#sns-addresses-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sns-addresses-list li {
+    margin: 0;
+}
+
+.sns-address-details {
+    display: none;
+}
+
+.sns-address-details:target,
+.sns-address-details.sns-address-selected {
+    display: block;
+}
+
+#sns-addresses-list ul li .sns-address-label-container {
+    position: relative;
+}
+
+#sns-addresses-list ul li a.sns-address-label {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#sns-addresses-list ul li a.sns-address-use {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.sns-address-details {
+    padding: 4px;
+}
+
+#sns-addresses-list ul {
+    -webkit-box-shadow: 0 4px 10px #bdbdbd;
+    -moz-box-shadow: 0 4px 10px #bdbdbd;
+    box-shadow: 0 4px 10px #bdbdbd;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#sns-addresses-list ul li a.sns-address-label {
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    color: #999;
+}
+
+#sns-addresses-list > ul {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.sns-address-details {
+    background: #fffff7;
+    color: #999;
+}
+
+.sns-address-details:target,
+.sns-address-details.sns-address-selected {
+    border-top: 3px solid #f1a900;
+}
+
+.sns-address-details ul {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 2px 7px !important;
 }

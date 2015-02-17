@@ -1,6 +1,6 @@
 <?php
 
-class Shopgo_SnS_Helper_Data extends Mage_Core_Helper_Abstract
+class Shopgo_SnS_Helper_Data extends Shopgo_Core_Helper_Abstract
 {
     public function restRequest($method, $params)
     {
@@ -62,9 +62,14 @@ class Shopgo_SnS_Helper_Data extends Mage_Core_Helper_Abstract
     public function getAddressesRegions($json = false)
     {
         $regions = array();
+        $countries = array(
+            'US', 'DE', 'FR', 'ES',
+            'CA'
+        );
 
-        $regionCollection = Mage::getModel('directory/region')->getResourceCollection()
-            ->addCountryFilter(array('US', 'DE'))
+        $regionCollection = Mage::getModel('directory/region')
+            ->getResourceCollection()
+            ->addCountryFilter($countries)
             ->load();
 
         foreach ($regionCollection as $region) {
@@ -75,6 +80,32 @@ class Shopgo_SnS_Helper_Data extends Mage_Core_Helper_Abstract
             );
         }
 
-        return $json ? json_encode($regions) : $regions;
+        return $json
+            ? str_replace("'", "\'", json_encode($regions))
+            : $regions;
+    }
+
+    public function getMissingRegions()
+    {
+        $regions = array(
+            'de' => array(
+                'code' => 'HES',
+                'name' => 'Hessen'
+            ),
+            'ca' => array(
+                'code' => 'ON',
+                'name' => 'Ontario'
+            ),
+            'fr' => array(
+                'code' => '75',
+                'name' => 'Paris'
+            ),
+            'es' => array(
+                'code' => 'Barcelona',
+                'name' => 'Barcelona'
+            )
+        );
+
+        return $regions;
     }
 }
