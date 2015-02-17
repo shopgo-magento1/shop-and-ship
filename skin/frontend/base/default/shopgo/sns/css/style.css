@@ -1,3 +1,11 @@
+#sns-form .form-list {
+    clear: both;
+}
+
+#sns-form .form-list li {
+    text-align: left;
+}
+
 #sns-get-addresses-loader {
     display: none;
 }
