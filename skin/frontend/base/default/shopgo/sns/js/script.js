@@ -77,11 +77,8 @@ shopgoSns.addressFormSelectors = {
                     $(shopgoSns.formSelectors.ajaxLoader).show();
                     $(shopgoSns.formSelectors.addressesContainer).hide();
 
-                    var valid =
-                        $('#sns-email').val() != ''
-                        && $('#sns-password').val() != '';
-
-                    if (!valid) {
+                    if ($('#sns-email').val() == ''
+                        || $('#sns-password').val() == '') {
                         $(shopgoSns.formSelectors.ajaxLoader).hide();
                     }
 
