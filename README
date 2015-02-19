@@ -5,6 +5,11 @@
 * Shop and Ship Magento extension.
 * v1.0.0
 
+### Roadmap ###
+
+* v1.0.5: Add SnS form to onepage checkout.
+* v1.1.0: Add SnS form to admin panel new customer and new order pages.
+
 ### Author ###
 
 Ammar (<ammar@shopgo.me>)
