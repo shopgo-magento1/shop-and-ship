@@ -16,4 +16,4 @@ Ammar (<ammar@shopgo.me>)
 
 ### License ###
 
-[GPLv2](https://bitbucket.org/shopgo/shopgo-shop-and-ship/src/f9b95c1edaea6fb62aeb5e4dbc0b28cfd183faff/COPYING?at=master)
+OSL-3.0
