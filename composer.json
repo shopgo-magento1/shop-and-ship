@@ -1,7 +1,10 @@
 {
     "name": "shopgo/Shopgo_SnS",
     "type": "magento-module",
-    "license": "OSL-3.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
     "description": "Shop and Ship Magento extension",
     "require": {
         "magento-hackathon/magento-composer-installer": "*",
