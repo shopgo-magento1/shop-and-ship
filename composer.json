@@ -8,7 +8,7 @@
     "description": "Shop and Ship Magento extension",
     "require": {
         "magento-hackathon/magento-composer-installer": "*",
-        "shopgo/shopgo_core": "dev-master"
+        "shopgo/core": "dev-master"
     },
     "authors":[
         {
